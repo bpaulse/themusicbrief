@@ -25,81 +25,8 @@
 
     <link rel="stylesheet" href="css/style.css">
 	<script src="imageslider/js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
-	
-    <script type="text/javascript">
-        window.jssor_1_slider_init = function() {
 
-            var jssor_1_SlideshowTransitions = [
-              {$Duration:800,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
-              {$Duration:800,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
-            ];
-
-            var jssor_1_options = {
-              $AutoPlay: 1,
-              $SlideshowOptions: {
-                $Class: $JssorSlideshowRunner$,
-                $Transitions: jssor_1_SlideshowTransitions,
-                $TransitionsOrder: 1
-              },
-              $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$
-              },
-              $ThumbnailNavigatorOptions: {
-                $Class: $JssorThumbnailNavigator$,
-                $SpacingX: 5,
-                $SpacingY: 5
-              }
-            };
-
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-
-            /*#region responsive code begin*/
-
-            var MAX_WIDTH = 1400;
-
-            function ScaleSlider() {
-                var containerElement = jssor_1_slider.$Elmt.parentNode;
-                var containerWidth = containerElement.clientWidth;
-
-                if (containerWidth) {
-
-                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-                    jssor_1_slider.$ScaleWidth(expectedWidth);
-                }
-                else {
-                    window.setTimeout(ScaleSlider, 30);
-                }
-            }
-
-            ScaleSlider();
-
-            $Jssor$.$AddEvent(window, "load", ScaleSlider);
-            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
-            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-            /*#endregion responsive code end*/
-        };
-    </script>
+    <script type="text/javascript" src="js/jssor.custom.js"></script>
     <style>
         /*jssor slider loading skin spin css*/
         .jssorl-009-spin img {
@@ -175,21 +102,40 @@
 
           <div class="ml-auto w-25">
             <nav class="site-navigation position-relative text-right" role="navigation">
-              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">  
-				<button id="myBtn" style=" border-radius: 12px;">Open Modal</button>
+              <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-lg-block m-0 p-0">
+				<button id="myBtn" style=" border-radius: 12px;" class="btn btn-primary btn-pill">Open Modal</button>
 
 				<!-- The Modal -->
 				<div id="myModal" class="modal" style="max-width: 2000px;padding: 179px 453px;">
-				
-				
+
+
 				  <!-- Modal content -->
 				  <div class="modal-content" style="width: auto;height: 300px;">
-					<span class="close" style="margin-left: 90%;">×</span>
-					<p style="padding-left: 10px;padding-right: 10px;">tdhtgfdhtfgvfhmhjh,jbbjhb..</p>
+					<span class="close" style="margin-left: 97%;">×</span>
+					<p style="padding-left: 10px;padding-right: 10px;">
+
+
+
+							<form action="" method="post" class="form-box">
+								<h3 class="h4 text-black mb-4">Sign Up</h3>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Email Addresss">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" placeholder="Password">
+								</div>
+								<div class="form-group mb-4">
+									<input type="password" class="form-control" placeholder="Re-type Password">
+								</div>
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary btn-pill" value="Sign up">
+								</div>
+							</form>
+
+					</p>
 				  </div>
-				
+
 				</div>
-				  <!-- <a class="btn" href="#ex2" rel="modal:open">Open Modal</a></li> -->
               </ul>
             </nav>
             <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a>
@@ -256,22 +202,10 @@
                 </svg>
             </div>
         </div>
-<!--
-						<div id="slideshow">
-							<div>
-								<img src="//farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg" style="width: 380px; height: 150px;">
-							</div>
-							<div>
-								<img src="//farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg" style="width: 380px; height: 150px;">
-							</div>
-							<div>
-								Pretty cool eh? This slide is proof the content can be anything.
-							</div>
-						</div>
- -->
+
 				</div>
 
-        
+
 				<div class="col-lg-6 mb-4" style="padding-top: 175px;padding-left: 40px;padding-right: 40px;">
           <div class="player">
             <span id="arm"></span>
@@ -336,7 +270,7 @@
                   <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necesLorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.sitatibus.</p>
                   <!-- <p data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary py-3 px-5 btn-pill">Admission Now</a></p> -->
                 </div>
-        
+
                 <!-- <div class="col-lg-2 mb-2">
                 </div> -->
 
@@ -376,7 +310,7 @@
 
    <!-- New Slide  -->
 <script>
-  /* Music 
+  /* Music
 ======================================*/
 var playlist = [
 	{
@@ -449,8 +383,8 @@ function load(){
 	music.innerHTML = '<source src="'+playlist[currentSong]['mp3']+'" type="audio/mp3">';
 	music.load();
 }
-function reset(){ 
-	rotate_reset = setInterval(function(){ 
+function reset(){
+	rotate_reset = setInterval(function(){
 		Rotate();
 		if(rot == 0){
 			clearTimeout(rotate_reset);
@@ -477,7 +411,7 @@ function formatSecondsAsTime(secs, format) {
   var hr  = Math.floor(secs / 3600);
   var min = Math.floor((secs - (hr * 3600))/60);
   var sec = Math.floor(secs - (hr * 3600) -  (min * 60));
-  if (sec < 10){ 
+  if (sec < 10){
     sec  = "0" + sec;
   }
   return min + ':' + sec;
@@ -535,16 +469,16 @@ pauseButton.onclick = function() {
 music.addEventListener("play", function () {
 	playButton.style.visibility = "hidden";
 	pause.style.visibility = "visible";
-	rotate_timer = setInterval(function(){ 
+	rotate_timer = setInterval(function(){
 		if(!music.paused && !music.ended && 0 < music.currentTime){
 			Rotate();
 		}
-	}, 10);	
+	}, 10);
 	if(armrot != -45){
 		arm.setAttribute("style", "transition: transform 800ms;");
 		arm.style.transform = 'rotate('+armrot+'deg)';
 	}
-	arm_rotate_timer = setInterval(function(){ 
+	arm_rotate_timer = setInterval(function(){
 		if(!music.paused && !music.ended && 0 < music.currentTime){
 			if(armrot == -45){
 				arm.setAttribute("style", "transition: transform 800ms;");
@@ -1020,7 +954,7 @@ input[type="range"] {
 	border-radius: 14px;
 	padding: 0px 1px;
 	background: rgb(21, 21, 24);
-	outline: none;	
+	outline: none;
 }
 input[type="range"]::-moz-range-track {
 	border: inherit;
@@ -1097,7 +1031,7 @@ input[type="range"]::-ms-thumb:hover, input[type="range"]::-ms-thumb:focus, inpu
 	}
 
   body.home.page {
-    position: fixed; 
+    position: fixed;
     overflow: hidden;
     width: 100%;
 }
@@ -1118,7 +1052,7 @@ input[type="range"]::-ms-thumb:hover, input[type="range"]::-ms-thumb:focus, inpu
 
 
 .footer {
- 
+
   right: 0;
   bottom: 0;
   left: 0;
